@@ -5,10 +5,14 @@ export default function Forms (props) {
     
     
     return (
-        <div className='container'>
-            <h3>Name: {member.name}</h3>
-            <h3>Email: {member.email}</h3>
-            <h3>Role: {member.role}</h3>
+        <div>
+            <div className='container'>
+                <h3>{member.name}</h3>
+                <h3>{member.email}</h3>
+                <h3>{member.role}</h3>
+            </div>
+
+            
         </div>
     )
 }

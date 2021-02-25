@@ -14,16 +14,6 @@ const teamInfo = [
         email: 'cody@email.com',
         role: 'Frontend Engineer',
     },
-    {
-        name: 'Derrick',
-        email: 'derrick@email.com',
-        role: 'Backend Engineer',
-    },
-    {
-        name: 'Michael',
-        email: 'michael@email.com',
-        role: 'Designer',
-    }
 ]
 
 export default teamInfo;
