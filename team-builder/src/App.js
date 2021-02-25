@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import Forms from './Forms'
+import teamInfo from './teamInfo'
+
 
 function App() {
+  const [teamMembers, setTeamMembers] = useState(teamInfo)
+  //console.log('team members', teamMembers)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to Team Builder!</h1>
+      {teamMembers.map((member, index) => {
+        return <Forms key={index} member={member} />
+      })}
     </div>
   );
 }
+
+
 
 export default App;
