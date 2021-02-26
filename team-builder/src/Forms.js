@@ -1,16 +1,32 @@
 import React from 'react'
 
-export default function Forms (props) {
-    const {member} = props
-    
-    
+export default function Forms ({teamMembers, values}) {
     return (
         <div>
-            <div className='container'>
-                <h3>{member.name}</h3>
-                <h3>{member.email}</h3>
-                <h3>{member.role}</h3>
-            </div>
+            <form>
+        <label>
+            Name:
+            <input
+            type='text'
+          />
+        </label> <br />
+
+        <label>
+          Email:
+          <input
+            type='text'
+          />
+        </label> <br />
+
+        <label>
+          Role:
+          <input
+            type='text'
+          />
+        </label> <br />
+
+        <button>Submit</button>
+      </form>
 
             
         </div>

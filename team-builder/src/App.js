@@ -17,35 +17,15 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome to Team Builder!</h1>
+      <Forms teamMembers={teamMembers} values={values}/>
+
       {teamMembers.map((member, index) => {
-        return <Forms key={index} member={member} />
+        return <div className='container' key={index}>
+          <h3>{member.name}</h3>
+          <h3>{member.email}</h3>
+          <h3>{member.role}</h3>
+    </div>
       })}
-      <form>
-        <label>
-          Name:
-          <input
-            type='text'
-          />
-        </label> <br />
-
-        <label>
-          Email:
-          <input
-            type='text'
-          />
-        </label> <br />
-
-        <label>
-          Role:
-          <input
-            type='text'
-          />
-        </label> <br />
-
-        <input
-          type='submit'
-        />
-      </form>
     </div>
   );
 }
